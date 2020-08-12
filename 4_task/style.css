@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(216, 131, 131);
+  font-family: "Baloo Tamma 2", cursive;
+  color: rgb(199, 235, 215);
+}
+header {
+  background-color: rgb(106, 173, 240);
+}
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+  background-color: lightskyblue;
+}
+
+header ul {
+  list-style: none;
+}
+
+header ul li {
+  display: inline-block;
+}
