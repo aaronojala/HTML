@@ -1,4 +1,8 @@
-*{margin:0;padding:0; box-sizing: border-box;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   background-color: rgb(216, 131, 131);
@@ -19,7 +23,8 @@ header ul li a {
   color: white;
   text-decoration: none;
   background-color: lightskyblue;
-  padding: 7px;
+  padding: 3px;
+  margin: 1px;
 }
 
 header ul {
@@ -34,44 +39,63 @@ table {
   background-color: white;
   color: black;
   border-collapse: collapse;
+  margin: 5px;
+  width: 600px;
+  height: 200px;
+  text-align: center;
 }
 
-thead{
+thead {
   background-color: rgb(24, 22, 22);
-color: white
+  color: white;
 }
 
-tr{border: 5px solid black;}
-td {border-right: 5px solid black;}
+tr {
+  border: 5px solid black;
+}
+td {
+  border-right: 5px solid black;
+  padding: 20px;
+}
 
-#boxes {background-color: green;
+#boxes {
+  background-color: green;
   background-image: url("https://source.unsplash.com/Bdf9aj6w2zA/1600x900");
-background-repeat: no-repeat;
-background-position: center center;
-background-attachment: fixed;
-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .box {
   background-color: beige;
-  height:200px;
-  width:200px;
-  margin:5px;
+  height: 200px;
+  width: 200px;
+  margin: 20px;
   display: inline-block;
 }
 
-.box1 {background-color: brown;
-border: 10px dotted yellow
+.box1 {
+  background-color: brown;
+  border: 10px dotted yellow;
 }
-.box2 {background-color: purple;
-border: 10px dashed blueviolet}
+.box2 {
+  background-color: purple;
+  border: 10px dashed blueviolet;
+}
 
-.box3 {background-color: crimson;
-border: 10px double wheat}
+.box3 {
+  background-color: crimson;
+  border: 10px double wheat;
+}
 
-.box4 {background-color: turquoise;
-border: 50px solid slateblue}
+.box4 {
+  background-color: turquoise;
+  border: 50px solid slateblue;
+}
 
-.box5 {background-color: teal;
-border: 50px solid whitesmoke;
-border-radius: 50%;}
+.box5 {
+  background-color: teal;
+  border: 50px solid whitesmoke;
+  border-radius: 50%;
+}
