@@ -1,16 +1,25 @@
+*{margin:0;padding:0; box-sizing: border-box;}
+
 body {
   background-color: rgb(216, 131, 131);
   font-family: "Baloo Tamma 2", cursive;
   color: rgb(199, 235, 215);
 }
+img {
+  float: left;
+  margin-right: 40px;
+}
+
 header {
   background-color: rgb(106, 173, 240);
+  padding: 7px;
 }
 
 header ul li a {
   color: white;
   text-decoration: none;
   background-color: lightskyblue;
+  padding: 7px;
 }
 
 header ul {
@@ -20,3 +29,49 @@ header ul {
 header ul li {
   display: inline-block;
 }
+
+table {
+  background-color: white;
+  color: black;
+  border-collapse: collapse;
+}
+
+thead{
+  background-color: rgb(24, 22, 22);
+color: white
+}
+
+tr{border: 5px solid black;}
+td {border-right: 5px solid black;}
+
+#boxes {background-color: green;
+  background-image: url("https://source.unsplash.com/Bdf9aj6w2zA/1600x900");
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;
+}
+
+.box {
+  background-color: beige;
+  height:200px;
+  width:200px;
+  margin:5px;
+  display: inline-block;
+}
+
+.box1 {background-color: brown;
+border: 10px dotted yellow
+}
+.box2 {background-color: purple;
+border: 10px dashed blueviolet}
+
+.box3 {background-color: crimson;
+border: 10px double wheat}
+
+.box4 {background-color: turquoise;
+border: 50px solid slateblue}
+
+.box5 {background-color: teal;
+border: 50px solid whitesmoke;
+border-radius: 50%;}
