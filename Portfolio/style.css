@@ -26,6 +26,10 @@ h2 {
   margin: 0 auto;
 }
 
+#future .container {
+  opacity: 0.9;
+}
+
 /* Header area */
 
 header {
