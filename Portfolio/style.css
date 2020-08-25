@@ -1,85 +1,140 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: lightblue;
-    text-align: center;
-    font-family: 'Source Code Pro', monospace ;}
+  font-family: "Source Code Pro", monospace;
+}
 
-p{color:lightcoral}
-h1{color:greenyellow}
+h1,
+h2 {
+  margin-bottom: 30px;
+}
 
-h1, h2 {
-    margin-bottom: 30px;
+.container {
+  max-width: 1200px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 50px;
+  border-radius: 2px;
+  min-height: 25%;
+  margin: 0 auto;
+}
+
+#future .container {
+  opacity: 0.9;
 }
 
 /* Header area */
 
 header {
-    background-color: olivedrab;
-    padding: 20px;
-    text-align: right
+  background-color: rgb(77, 77, 77);
+  padding: 20px;
+  text-align: right;
 }
 
 header #logo a {
-    font-size: 32px;
-    float:left;
-    color:white;
-    text-decoration: none;
+  font-size: 32px;
+  float: left;
+  color: white;
+  text-decoration: none;
 }
 
 /* Main navigation*/
 
 header nav ul {
-    list-style: none;
-    padding: 20px;
+  list-style: none;
+  padding: 20px;
 }
 
 header nav ul li {
-    display: inline-block;
+  display: inline-block;
 }
 
 header nav ul li a {
-    color: white;
-    text-decoration: none;
-    background-color: lightgreen;
-    padding: 15px;
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+}
+
+header nav ul li a:hover {
+  background-color: slategray;
 }
 
 /* Hero Banner */
 
 main #hero-banner {
-    background-image: url("https://source.unsplash.com/Bdf9aj6w2zA/1600x900");
-    height: 85vh;
-    padding: 50px;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
+  background: url("https://source.unsplash.com/Bdf9aj6w2zA/1600x900") no-repeat
+    fixed center center/cover;
+  height: 85vh;
+  padding: 50px;
 }
 
 main #hero-banner h1 {
-    color: white;
-    text-align: center;
-    font-size: 70px;
-    padding: 300px
+  color: white;
+  text-align: center;
+  font-size: 70px;
+  margin: 100px;
 }
 
-main #hero-banner h1 span {
-    color: black
+main #hero-banner span {
+  color: black;
 }
 
-.name {
-    color: black;
+/* Past and future section */
 
+main #past,
+main #future {
+  background-color: lightslategray;
+  padding: 50px;
+  width: 100%;
 }
 
-#past {
-    background-color: blanchedalmond;
-    margin: 30px;
+main #past img,
+main #future img {
+  width: 300px;
+  float: left;
+  margin-right: 50px;
+  border-radius: 5px;
 }
-  
 
+main #past p,
+main #future p {
+  line-height: 2;
+}
+
+main #future {
+  background: url("https://source.unsplash.com//E0AHdsENmDg") no-repeat fixed
+    center center/cover;
+  clear: both;
+}
+
+/* Present section */
+
+main #present img {
+  float: left;
+  width: 50%;
+  margin-right: 50px;
+}
+
+main #present .content {
+  padding: 50px;
+}
+
+main #present .content p {
+  line-height: 2;
+}
+
+/* footer */
+
+footer {
+  background-color: lightslategray;
+  text-align: center;
+  color: white;
+  padding: 30px;
+}
