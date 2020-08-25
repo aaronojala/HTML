@@ -65,8 +65,11 @@ main #hero-banner h1 {
     color: white;
     text-align: center;
     font-size: 70px;
-    
+    padding: 300px
+}
 
+main #hero-banner h1 span {
+    color: black
 }
 
 .name {
