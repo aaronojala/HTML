@@ -4,15 +4,20 @@
   box-sizing: border-box;
 }
 
+/* body */
+
 body {
   background-color: rgb(35, 104, 70);
   height: 100%;
   min-height: 100%;
+  font-family: "Raleway", sans-serif;
 }
+
+/* container */
 
 .container {
   width: 300px;
-  height: 300px;
+  height: 500px;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -21,7 +26,64 @@ body {
   transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 5px;
+  clear: both;
 }
+
+/* form general*/
+
+.h1 {
+  padding: 15px;
+  text-align: center;
+}
+
+.h3 {
+  padding: 10px;
+  text-align: center;
+}
+
+.form {
+  text-align: center;
+}
+
+.container input {
+  width: 280px;
+  height: 30px;
+}
+
+.form label {
+  font-size: 10px;
+  display: flex;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+/* button */
+
+button {
+  width: 200px;
+  height: 30px;
+  background-color: coral;
+  border: coral;
+  color: white;
+  border-radius: 2px;
+  margin: 20px;
+}
+
+/* terms and conditions */
+
+.sign p {
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sign p a {
+  text-decoration: none;
+  color: coral;
+}
+
+/* footer */
 
 footer {
   position: fixed;
@@ -30,5 +92,10 @@ footer {
   width: 100%;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 30px;
+}
+
+footer a {
+  text-decoration: none;
+  color: coral;
 }
