@@ -138,3 +138,56 @@ footer {
   color: white;
   padding: 30px;
 }
+
+footer .container {
+  background-color: lightslategrey;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+footer p {
+  margin-top: 48px;
+  font-size: 12px;
+}
+
+/* Form */
+
+footer form {
+  margin: 0 auto;
+  width: 60%;
+  text-align: left;
+}
+
+footer form .form-group {
+  margin: 32px 0;
+}
+
+footer form .form-group label {
+  width: 200px;
+  display: inline-block;
+  text-align: left;
+}
+
+footer form .form-group input,
+footer form .form-group textarea {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  width: 60%;
+  font-size: 1rem;
+}
+
+footer form .form-group textarea {
+  min-height: 100px;
+}
+
+footer form button {
+  background-color: rgb(77, 77, 77);
+  border-radius: 5px;
+  border: none;
+  padding: 16px 32px;
+  color: #fff;
+  margin-left: 240px;
+  font-size: inherit;
+  font-family: inherit;
+}
