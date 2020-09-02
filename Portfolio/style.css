@@ -18,7 +18,7 @@ h2 {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 75rem;
   background-color: rgba(255, 255, 255, 0.95);
   padding: 50px;
   border-radius: 2px;
@@ -35,12 +35,12 @@ h2 {
 header {
   background-color: rgb(77, 77, 77);
   padding: 20px;
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
 }
 
 header #logo a {
   font-size: 32px;
-  float: left;
   color: white;
   text-decoration: none;
 }
@@ -73,6 +73,9 @@ main #hero-banner {
     fixed center center/cover;
   height: 85vh;
   padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main #hero-banner h1 {
@@ -86,16 +89,62 @@ main #hero-banner span {
   color: black;
 }
 
-/* Past and future section */
+/* past section */
 
-main #past,
+main #past {
+  background-color: lightslategray;
+}
+
+main #past h2 {
+  padding-left: 200px;
+  padding-top: 50px;
+}
+
+main #past .containerPast {
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+main #past .box {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px;
+  width: 30rem;
+  height: 34rem;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+main #past .box:hover {
+}
+
+main #past .box img {
+  border-radius: 5px;
+}
+
+main #past .box h3,
+p,
+a {
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+main #past .box a {
+  text-decoration: none;
+  color: rgb(145, 13, 13);
+}
+
+/* future section */
+
 main #future {
   background-color: lightslategray;
   padding: 50px;
   width: 100%;
 }
 
-main #past img,
 main #future img {
   width: 300px;
   float: left;
@@ -103,7 +152,6 @@ main #future img {
   border-radius: 5px;
 }
 
-main #past p,
 main #future p {
   line-height: 2;
 }
@@ -111,13 +159,16 @@ main #future p {
 main #future {
   background: url("https://source.unsplash.com//E0AHdsENmDg") no-repeat fixed
     center center/cover;
-  clear: both;
 }
 
 /* Present section */
 
+main #present {
+  display: flex;
+  justify-content: space-between;
+}
+
 main #present img {
-  float: left;
   width: 50%;
   margin-right: 50px;
 }
