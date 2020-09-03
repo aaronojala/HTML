@@ -109,7 +109,7 @@ main #past .containerPast {
 main #past .box {
   background-color: white;
   border-radius: 5px;
-  box-shadow: 2px 2px 2px;
+  box-shadow: 2px 2px 10px 0px;
   width: 30rem;
   height: 34rem;
   padding: 1rem;
@@ -119,6 +119,7 @@ main #past .box {
 }
 
 main #past .box:hover {
+  box-shadow: 2px 2px 15px 2px;
 }
 
 main #past .box img {
@@ -241,4 +242,19 @@ footer form button {
   margin-left: 240px;
   font-size: inherit;
   font-family: inherit;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  main #past .containerPast {
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main #past h2 {
+    padding-left: 350px;
+    padding-top: 50px;
+  }
 }
