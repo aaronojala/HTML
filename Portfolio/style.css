@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
 }
 
 h1,
@@ -20,7 +20,7 @@ h2 {
 .container {
   max-width: 75rem;
   background-color: rgba(255, 255, 255, 0.95);
-  padding: 50px;
+  padding: 3rem;
   border-radius: 2px;
   min-height: 25%;
   margin: 0 auto;
@@ -34,13 +34,13 @@ h2 {
 
 header {
   background-color: rgb(77, 77, 77);
-  padding: 20px;
+  padding: 1.25rem;
   display: flex;
   justify-content: space-between;
 }
 
 header #logo a {
-  font-size: 32px;
+  font-size: 2rem;
   color: white;
   text-decoration: none;
 }
@@ -49,7 +49,7 @@ header #logo a {
 
 header nav ul {
   list-style: none;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 header nav ul li {
@@ -59,7 +59,7 @@ header nav ul li {
 header nav ul li a {
   color: white;
   text-decoration: none;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 header nav ul li a:hover {
@@ -69,10 +69,10 @@ header nav ul li a:hover {
 /* Hero Banner */
 
 main #hero-banner {
-  background: url("https://source.unsplash.com/Bdf9aj6w2zA/1600x900") no-repeat
+  background: url('https://source.unsplash.com/Bdf9aj6w2zA/1600x900') no-repeat
     fixed center center/cover;
   height: 85vh;
-  padding: 50px;
+  padding: 3.125rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,8 +81,7 @@ main #hero-banner {
 main #hero-banner h1 {
   color: white;
   text-align: center;
-  font-size: 70px;
-  margin: 100px;
+  font-size: 4.375rem;
 }
 
 main #hero-banner span {
@@ -96,8 +95,8 @@ main #past {
 }
 
 main #past h2 {
-  padding-left: 200px;
-  padding-top: 50px;
+  padding-left: 5rem;
+  padding-top: 3rem;
 }
 
 main #past .containerPast {
@@ -110,8 +109,8 @@ main #past .box {
   background-color: white;
   border-radius: 5px;
   box-shadow: 2px 2px 10px 0px;
-  width: 30rem;
-  height: 34rem;
+  width: 24rem;
+  height: 36rem;
   padding: 1rem;
   margin: 1rem;
   display: flex;
@@ -142,14 +141,13 @@ main #past .box a {
 
 main #future {
   background-color: lightslategray;
-  padding: 50px;
-  width: 100%;
+  padding: 3rem;
 }
 
 main #future img {
-  width: 300px;
+  width: 18rem;
   float: left;
-  margin-right: 50px;
+  margin-right: 3rem;
   border-radius: 5px;
 }
 
@@ -158,7 +156,7 @@ main #future p {
 }
 
 main #future {
-  background: url("https://source.unsplash.com//E0AHdsENmDg") no-repeat fixed
+  background: url('https://source.unsplash.com//E0AHdsENmDg') no-repeat fixed
     center center/cover;
 }
 
@@ -171,11 +169,11 @@ main #present {
 
 main #present img {
   width: 50%;
-  margin-right: 50px;
+  margin-right: 3rem;
 }
 
 main #present .content {
-  padding: 50px;
+  padding: 3rem;
 }
 
 main #present .content p {
@@ -188,17 +186,17 @@ footer {
   background-color: lightslategray;
   text-align: center;
   color: white;
-  padding: 30px;
+  padding: 2rem;
 }
 
 footer .container {
   background-color: lightslategrey;
-  padding-bottom: 0px;
-  padding-top: 0px;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 footer p {
-  margin-top: 48px;
+  margin-top: 3rem;
   font-size: 12px;
 }
 
@@ -211,11 +209,11 @@ footer form {
 }
 
 footer form .form-group {
-  margin: 32px 0;
+  margin: 2rem 0;
 }
 
 footer form .form-group label {
-  width: 200px;
+  width: 12.5rem;
   display: inline-block;
   text-align: left;
 }
@@ -230,21 +228,21 @@ footer form .form-group textarea {
 }
 
 footer form .form-group textarea {
-  min-height: 100px;
+  min-height: 6.5rem;
 }
 
 footer form button {
   background-color: rgb(77, 77, 77);
   border-radius: 5px;
   border: none;
-  padding: 16px 32px;
+  padding: 1rem 2rem;
   color: #fff;
-  margin-left: 240px;
+  margin-left: 15rem;
   font-size: inherit;
   font-family: inherit;
 }
 
-/* Tablet */
+/* Tablets up to 768px */
 
 @media (max-width: 768px) {
   main #past .containerPast {
@@ -254,7 +252,50 @@ footer form button {
     align-items: center;
   }
   main #past h2 {
-    padding-left: 350px;
-    padding-top: 50px;
+    padding-left: 22rem;
+    padding-top: 3rem;
+  }
+
+  main #present {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main #present img {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  footer form {
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+  }
+
+  footer form button {
+    margin-left: 0;
+  }
+}
+
+/* Landscape phones up to 576px */
+
+@media (max-width: 576px) {
+  header {
+    font-size: 12px;
+  }
+
+  main #hero-banner h1 {
+    color: white;
+    text-align: center;
+    font-size: 35px;
+  }
+
+  main #past h2 {
+    padding-left: 16rem;
+  }
+
+  footer form .form-group label {
+    text-align: center;
   }
 }
