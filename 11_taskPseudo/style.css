@@ -8,34 +8,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-section {
-  position: relative;
-  height: 85vh;
-  background: url("https://source.unsplash.com/1600x900/?mountain,asia")
-    no-repeat fixed center center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 2;
-}
-
-section::after {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  top: 0;
-  left: 0;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  z-index: 1;
-  position: relative;
-  color: whitesmoke;
-}
+/* Header area */
 
 header {
   background-color: #333;
@@ -49,14 +22,6 @@ header {
   align-items: center;
   color: white;
   padding: 1rem;
-}
-
-main {
-  margin-top: 60px;
-}
-
-footer {
-  background-color: #333;
 }
 
 li {
@@ -81,26 +46,60 @@ a:visited {
   text-decoration: underline;
 }
 
+/* Main area */
+
+main {
+  margin-top: 60px;
+}
+
+/* Hero-banner */
+
+section {
+  position: relative;
+  height: 85vh;
+  background: url('https://source.unsplash.com/1600x900/?mountain,asia')
+    no-repeat fixed center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 2;
+}
+
+section::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+}
+
+.container {
+  max-width: 1000px;
+  background-color: rgba(240, 230, 140, 0.253);
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+  color: whitesmoke;
+}
+
+/* Text content */
+
+.text-content {
+  position: relative;
+}
+
 .text-content p {
   padding: 1rem;
   color: grey;
   background-color: lightcyan;
   margin: 1rem;
 }
-/* .text-content p:first-child {
+.text-content p:first-child {
   color: black;
-  background-color: cyan;
-} */
-
-/* .text-content p:last-child {
-  color: green;
-  background-color: pink;
-} */
-
-/* .text-content p:nth-child(2) {
-  color: green;
-  background-color: pink;
-} */
+  background-color: orangered;
+}
 
 .text-content p:nth-child(2) {
   color: green;
@@ -109,28 +108,37 @@ a:visited {
   top: 75px;
   left: 75px;
 }
-
-.text-content {
-  position: relative;
-}
-
 .text-content p:nth-child(3) {
   color: green;
   background-color: yellow;
   position: absolute;
-  bottom: 0;
+  bottom: 50px;
+  right: 150px;
 }
 
 .text-content p:nth-child(4) {
   position: sticky;
   color: white;
-  top: 600px;
+  top: 300px;
   background-color: mediumslateblue;
 }
-/* .text-content p:nth-child(odd) {
+
+.text-content p:last-child {
+  color: purple;
+  background-color: orchid;
+}
+
+/* .text-content p:nth-child(5n + 1) { // This means every 5th element starting from the first element
+  color: aqua;
+  background-color: blue;
+} */
+
+/* .text-content p:nth-child(odd) { // This means every odd element (can also be even)
   color: blue;
   background-color: lightyellow;
 } */
+
+/* Icons */
 
 i {
   color: teal;
