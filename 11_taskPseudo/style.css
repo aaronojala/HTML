@@ -57,7 +57,7 @@ main {
 section {
   position: relative;
   height: 85vh;
-  background: url('https://source.unsplash.com/1600x900/?mountain,asia')
+  background: url("https://source.unsplash.com/1600x900/?mountain,asia")
     no-repeat fixed center center/cover;
   display: flex;
   justify-content: center;
@@ -67,7 +67,7 @@ section {
 
 section::after {
   position: absolute;
-  content: '';
+  content: "";
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
