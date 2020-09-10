@@ -196,38 +196,19 @@ main #skills .containerSkills .box {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-main #skills .container .box .myProgress {
-  width: 12rem;
+#skills progress[value] {
   height: 1.5rem;
+  width: 12rem;
+  -webkit-appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
   border-radius: 2px;
   background-color: rgb(241, 241, 241);
   box-shadow: inset -2px 2px 3px rgb(175, 175, 175);
 }
 
-main #skills .container .box .myProgress #myBar {
-  width: 25%;
-  height: 100%;
-  border-radius: 2px;
-  background-color: black;
-}
-
-main #skills .container .box .myProgress #myBar2 {
-  width: 15%;
-  height: 100%;
-  border-radius: 2px;
-  background-color: black;
-}
-
-main #skills .container .box .myProgress #myBar3 {
-  width: 80%;
-  height: 100%;
-  border-radius: 2px;
-  background-color: black;
-}
-
-main #skills .container .box .myProgress #myBar4 {
-  width: 90%;
-  height: 100%;
+progress[value]::-webkit-progress-value {
   border-radius: 2px;
   background-color: black;
 }
