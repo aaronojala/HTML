@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: 0;
 }
 
 html {
@@ -9,8 +9,8 @@ html {
 }
 
 body {
-  font-size: 1.5rem;
   height: 100%;
+  font-size: 1.5rem;
 }
 
 .pm {
@@ -18,24 +18,74 @@ body {
   margin: 5px;
 }
 
-/* header area */
+/* Header */
 
-.header {
+header {
   display: grid;
-  grid-template-columns: 50% 1fr 1fr 1fr;
-  grid-template-rows: 12.5%;
+  grid-template-columns: 3fr 3fr;
 }
 
-.site-title {
+.sitetitle {
   background-color: yellow;
-  grid-column-start: 1;
-  grid-column-end: 2;
 }
 
 ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+li {
   list-style: none;
+  background-color: red;
 }
 
-li {
-  display: inline-grid;
+/* main section */
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.posttitle {
+  background-color: lawngreen;
+  grid-column: 1 / 4;
+}
+
+.postmeta {
+  background-color: lightcoral;
+  grid-column: 1;
+  grid-row: 2 / 7;
+}
+
+.maincontent {
+  background-color: lightpink;
+  grid-column: 2/4;
+  grid-row: 2/4;
+}
+
+.maincontentimage {
+  background-color: magenta;
+  grid-column: 2/4;
+  grid-row: 4/7;
+}
+
+.sidebar {
+  background-color: midnightblue;
+  grid-row: 1/3;
+}
+
+.ads {
+  background-color: olive;
+  grid-row: 3/5;
+}
+
+.otherstuff {
+  background-color: peachpuff;
+  grid-row: 5/7;
+}
+
+/* footer */
+
+footer {
+  background-color: brown;
 }
