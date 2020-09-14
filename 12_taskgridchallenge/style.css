@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 1.5rem;
+  height: 100%;
+}
+
+.pm {
+  min-height: 100px;
+  margin: 5px;
+}
+
+/* header area */
+
+.header {
+  display: grid;
+  grid-template-columns: 50% 1fr 1fr 1fr;
+  grid-template-rows: 12.5%;
+}
+
+.site-title {
+  background-color: yellow;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-grid;
+}
