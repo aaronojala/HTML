@@ -73,6 +73,11 @@ header nav ul {
   margin-right: 2rem;
 }
 
+.menu-bar li a:hover,
+.contacthover li a:hover {
+  color: lightslategray;
+}
+
 .sub-menu {
   display: none;
   position: absolute;
@@ -255,17 +260,35 @@ progress[value]::-webkit-progress-value {
   padding: 10rem 4rem;
 }
 
+#gallery a {
+  text-decoration: none;
+  color: rgb(145, 13, 13);
+}
+
 #gallery .grid-container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(9, 5vw);
   grid-gap: 5px;
+  padding-top: 2rem;
 }
 
 #gallery .gallery_img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+#gallery figure {
+  overflow: hidden;
+}
+
+figure img {
+  transition: transform 0.5s ease;
+}
+
+figure:hover img {
+  transform: scale(1.2);
 }
 
 .dog {
