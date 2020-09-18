@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-margin-top: 5em;
 }
 
 html {
@@ -87,6 +88,7 @@ header nav ul {
   color: black;
   padding: 5px 0;
   border-bottom: 4px solid transparent;
+  display: block;
 }
 
 .sub-menu li a:hover {
@@ -321,18 +323,18 @@ figure:hover img {
 }
 
 .elephant {
-  grid-column: span 2;
+  grid-column: span 3;
   grid-row: 4 / 10;
 }
 
 .penguin {
-  grid-column: span 2;
-  grid-row: span 4;
+  grid-column: 4/5;
+  grid-row: span 3;
 }
 
 .seal {
-  grid-column: span 2;
-  grid-row: span 2;
+  grid-column: 4/5;
+  grid-row: 4/7;
 }
 
 /* footer */
