@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  src: url(finlandica-regularWeb.ttf);
+  font-family: 'Fin';
+}
+
+body {
+  font-family: 'Fin';
+  background-color: #dfdfdf;
+}
+
+a {
+  text-decoration: none;
+}
+
+#container {
+  background-color: white;
+  max-width: 95%;
+  margin: 0 2.5%;
+}
+
+/* logo area */
+
+#top {
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo {
+  padding: 1rem 3rem;
+}
+
+#logo a {
+  display: block;
+  color: #002da1;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+#logo .finland {
+  font-weight: bolder;
+}
+
+.link_1 {
+  padding: 1.5rem 3rem;
+}
+
+.link_1 a {
+  color: #002da1;
+  font-size: 14px;
+}
+
+.link_1 i {
+  font-size: 10px;
+}
+
+.link_1:hover {
+  text-decoration: underline;
+}
+
+/* navigation */
+
+nav {
+  background-color: #002da1;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  padding-left: 36px;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 1rem 0;
+}
+
+nav ul li a {
+  color: white;
+  text-transform: uppercase;
+  padding: 0 12px;
+  padding-bottom: 12px;
+}
+
+nav ul li a:hover {
+  border-bottom: 5px solid white;
+}
+
+nav .home {
+  border-bottom: 5px solid white;
+}
+
+nav i {
+  padding: 1rem 3rem;
+}
+
+/* hero banner */
+
+#hero-banner {
+  background: url('https://source.unsplash.com/cw-cj_nFa14/') no-repeat fixed
+    center center/cover;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+#hero-banner::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 45, 161, 0.4);
+}
+
+#hero-banner .content {
+  color: white;
+  z-index: 1;
+  text-transform: uppercase;
+  max-width: 55%;
+}
+
+#hero-banner h1 {
+  font-size: 100px;
+  font-weight: lighter;
+  margin-bottom: 1rem;
+}
+
+#hero-banner span {
+  font-weight: bold;
+}
+
+#hero-banner p {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
