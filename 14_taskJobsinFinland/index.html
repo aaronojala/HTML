@@ -24,16 +24,30 @@
             <a href="#">» Work in Finland</a>
           </div>
         </div>
-        <nav>
+        <nav id="navbar">
           <ul>
             <li><a class="home" href="#">Jobs Home</a></li>
-            <li><a href="#">Regions</a></li>
+            <div class="menu-bar">
+              <li><a href="#">Regions</a></li>
+              <div class="dropdown">
+                <ul>
+                  <li><a href="#">Capital Region</a></li>
+                  <li><a href="#">Lapland</a></li>
+                  <li><a href="#">Central Ostrobothnia</a></li>
+                  <li><a href="#">Southwest Finland</a></li>
+                  <li><a href="#">Northern Savonia</a></li>
+                  <li><a href="#">Pirkanmaa</a></li>
+                  <li><a href="#">Ostrobothnia</a></li>
+                  <li><a href="#">Satakunta</a></li>
+                </ul>
+              </div>
+            </div>
             <li><a href="#">Open positions</a></li>
             <li><a href="#">Campaigns</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">For Employers</a></li>
           </ul>
-          <i class="fas fa-search"></i>
+          <a class="search" href="#"><i class="fas fa-search"></i></a>
         </nav>
       </header>
       <main>
@@ -82,24 +96,26 @@
             Not familiar with the Finnish geography? Don’t worry, you can also
             browse the jobs on the Finland map.
           </p>
-          <button>See regions on map</button>
+          <button><a href="#">See regions on map</a></button>
           <div class="grid">
-            <div class="item"><a href="#">Item</a></div>
-            <div class="item"><a href="#">Item</a></div>
-            <div class="item"><a href="#">Item</a></div>
-            <div class="item"><a href="#">Item</a></div>
-            <div class="item"><a href="#">Item</a></div>
-            <div class="item"><a href="#">Item</a></div>
-            <div class="item"><a href="#">Item</a></div>
-            <div class="item"><a href="#">Item</a></div>
+            <div class="item"><a href="#">capital region</a></div>
+            <div class="item"><a href="#">lapland</a></div>
+            <div class="item"><a href="#">central ostrobothnia</a></div>
+            <div class="item"><a href="#">southwest finland</a></div>
+            <div class="item"><a href="#">northern savonia</a></div>
+            <div class="item"><a href="#">pirkanmaa</a></div>
+            <div class="item"><a href="#">ostrobothnia</a></div>
+            <div class="item"><a href="#">satakunta</a></div>
           </div>
         </section>
       </main>
       <footer>
         <div class="grid">
-          <div class="item"><h3>Jobs in Finland</h3></div>
           <div class="item">
-            <h3>Links</h3>
+            <h3>Jobs in <span>Finland</span></h3>
+          </div>
+          <div class="item">
+            <h3 class="links">Links</h3>
             <a href="#">Business Finland: Work in Finland</a>
             <p>The why and how of starting your career in Finland.</p>
             <a href="#">Migri.fi</a>
@@ -112,11 +128,13 @@
           </div>
           <div class="item"></div>
           <div class="item">
-            <a href="#">Contact for companies</a>
+            <a class="contact" href="#">Contact for companies</a>
             <a href="#">Terms of use</a>
           </div>
         </div>
       </footer>
     </div>
+
+    <script src="scripts.js"></script>
   </body>
 </html>

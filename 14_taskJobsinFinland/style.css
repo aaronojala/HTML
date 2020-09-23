@@ -24,6 +24,13 @@ a {
   margin: 0 2.5%;
 }
 
+/*/ fixed header (JS) */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 95%;
+}
+
 /* logo area */
 
 #top {
@@ -71,6 +78,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 2;
 }
 
 nav ul {
@@ -99,9 +107,51 @@ nav .home {
   border-bottom: 5px solid white;
 }
 
+nav .search {
+  color: white;
+}
+
 nav i {
   padding-right: 40px;
   font-size: 10px;
+}
+
+/* drop down menu */
+
+.menu-bar {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+}
+
+.dropdown ul {
+  padding: 0;
+}
+
+.menu-bar:hover .dropdown {
+  display: block;
+  background-color: white;
+  width: 8.5rem;
+  z-index: 3;
+  margin-top: 5px;
+}
+
+.dropdown li {
+  padding: 6px;
+}
+
+.dropdown a {
+  color: #002da1;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.dropdown a:hover {
+  border-bottom: none;
 }
 
 /* hero banner */
@@ -242,4 +292,174 @@ nav i {
 #category .item:nth-child(9) {
   background-image: url('https://source.unsplash.com/5aiRb5f464A');
   background-size: cover;
+}
+
+/* region sections */
+
+#region {
+  margin-top: 2rem;
+}
+
+#region h2 {
+  color: #002da1;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 2rem 2rem 0 2rem;
+  margin-bottom: 10px;
+}
+
+#region p {
+  padding: 0 2rem;
+  font-size: 19px;
+}
+
+#region button {
+  margin: 1rem 2rem;
+  padding: 10px;
+  background-color: #002da1;
+  border-radius: 2px;
+  border: none;
+}
+
+#region button a {
+  color: white;
+  font-size: 11px;
+}
+
+#region .grid {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+}
+
+#region .item {
+  min-height: 150px;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column-reverse;
+  transition: filter 0.5s;
+}
+
+#region .item::after {
+  position: absolute;
+  content: '';
+  height: 150px;
+  width: 260px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#region .item:hover {
+  text-decoration: underline;
+  filter: brightness(80%);
+}
+
+#region .item a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 10px;
+  padding-top: 115px;
+  text-shadow: 0 0 5px black;
+  z-index: 1;
+}
+
+#region .item:first-child {
+  background-image: url('https://source.unsplash.com/bpDJvls-h-0');
+  background-size: cover;
+}
+
+#region .item:nth-child(2) {
+  background-image: url('https://source.unsplash.com/2R_JJLqrJzI');
+  background-size: cover;
+}
+
+#region .item:nth-child(3) {
+  background-image: url('https://source.unsplash.com/Ttb5EkKxJD4');
+  background-size: cover;
+}
+
+#region .item:nth-child(4) {
+  background-image: url('https://source.unsplash.com/idcVfrvYBxM');
+  background-size: cover;
+}
+
+#region .item:nth-child(5) {
+  background-image: url('https://source.unsplash.com/CcNCC0Zplwc');
+  background-size: cover;
+}
+
+#region .item:nth-child(6) {
+  background-image: url('https://source.unsplash.com/GYTD37JoZO8');
+  background-size: cover;
+}
+
+#region .item:nth-child(7) {
+  background-image: url('https://source.unsplash.com/vvNkXsnuXuY');
+  background-size: cover;
+}
+
+#region .item:nth-child(8) {
+  background-image: url('https://source.unsplash.com/vQbT8qyliOg');
+  background-size: cover;
+}
+
+/* footer */
+
+footer {
+  background-color: #002da1;
+  color: white;
+  padding-bottom: 1rem;
+  margin-top: 5rem;
+}
+
+footer h3 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+footer p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+footer h3 span {
+  display: block;
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+footer .links {
+  font-weight: bold;
+}
+
+footer a {
+  color: white;
+  font-size: 12px;
+  font-weight: bolder;
+  display: block;
+  margin-bottom: 5px;
+}
+
+footer .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2.4rem;
+}
+
+footer .item {
+  width: 250px;
+}
+
+footer .item .contact {
+  margin-bottom: 20px;
+}
+
+footer .item:nth-child(4) {
+  margin-left: 2rem;
+  margin-top: 1.5rem;
 }
