@@ -9,9 +9,18 @@
   font-family: 'Fin';
 }
 
+@font-face {
+  src: url(finlandica-boldWeb.ttf);
+  font-family: 'FinBold';
+}
+
 body {
   font-family: 'Fin';
   background-color: #dfdfdf;
+}
+
+h2 {
+  font-family: 'FinBold';
 }
 
 a {
@@ -50,7 +59,7 @@ a {
 }
 
 #logo .finland {
-  font-weight: bolder;
+  font-family: 'FinBold';
 }
 
 .link_1 {
@@ -162,6 +171,10 @@ nav i {
   cursor: pointer;
 }
 
+::placeholder {
+  color: #002da1;
+}
+
 /* drop down menu */
 
 .menu-bar {
@@ -237,7 +250,7 @@ nav i {
 }
 
 #hero-banner span {
-  font-weight: bold;
+  font-family: 'FinBold';
 }
 
 #hero-banner p {
@@ -245,6 +258,24 @@ nav i {
   margin-bottom: 5px;
 }
 
+/* Back to top button */
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 40px; /* Place the button at the bottom of the page */
+  right: 40px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgba(255, 255, 255, 0.7); /* Set a background color */
+  height: 40px;
+  width: 40px;
+  color: #002da1; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  border-radius: 2px; /* Rounded corners */
+  font-size: 16px; /* Increase font size */
+}
 /* category section */
 
 #category h2 {
@@ -468,12 +499,12 @@ footer p {
 
 footer h3 span {
   display: block;
-  font-weight: bold;
+  font-family: 'FinBold';
   margin-top: 6px;
 }
 
 footer .links {
-  font-weight: bold;
+  font-family: 'FinBold';
 }
 
 footer a {
@@ -505,4 +536,5 @@ footer .item .contact {
 footer .item:nth-child(4) {
   margin-left: 2rem;
   margin-top: 1.5rem;
+  font-family: 'FinBold';
 }
