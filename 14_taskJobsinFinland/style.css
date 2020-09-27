@@ -107,6 +107,8 @@ nav .home {
   border-bottom: 5px solid white;
 }
 
+/* toggle search */
+
 nav .search {
   color: white;
 }
@@ -114,6 +116,50 @@ nav .search {
 nav i {
   padding-right: 40px;
   font-size: 10px;
+}
+
+.searchbar a:hover {
+  border-bottom: none;
+}
+
+.togglesearch {
+  background: white;
+  position: absolute;
+  top: 125px;
+  right: 5%;
+  width: 230px;
+  height: 50px;
+  line-height: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-top: 4px solid white;
+  z-index: 4;
+  display: none;
+}
+.togglesearch:before {
+  content: '';
+  position: absolute;
+  top: -18px;
+  right: 13px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid white;
+}
+.togglesearch input[type='text'] {
+  width: 150px;
+  padding: 5px 10px;
+  margin-left: 23px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.togglesearch input[type='button'] {
+  width: 50px;
+  padding: 5px 0;
+  background: #002da1;
+  color: #fff;
+  margin-left: -6px;
+  border: 1px solid #002da1;
+  cursor: pointer;
 }
 
 /* drop down menu */
@@ -148,10 +194,12 @@ nav i {
   color: #002da1;
   font-size: 12px;
   text-transform: capitalize;
+  padding: 0px;
 }
 
 .dropdown a:hover {
   border-bottom: none;
+  box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.1);
 }
 
 /* hero banner */
@@ -225,20 +273,13 @@ nav i {
   max-width: 260px;
   display: flex;
   flex-direction: column-reverse;
-  transition: filter 0.5s;
-}
-
-#category .item::after {
-  position: absolute;
-  content: '';
-  height: 150px;
-  width: 260px;
-  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.5s;
 }
 
 #category .item:hover {
   text-decoration: underline;
-  filter: brightness(80%);
+  box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.3);
 }
 
 #category .item a {
@@ -316,7 +357,7 @@ nav i {
 
 #region button {
   margin: 1rem 2rem;
-  padding: 10px;
+  height: 30px;
   background-color: #002da1;
   border-radius: 2px;
   border: none;
@@ -325,6 +366,11 @@ nav i {
 #region button a {
   color: white;
   font-size: 11px;
+  padding: 10px;
+}
+
+#region button:hover {
+  opacity: 0.9;
 }
 
 #region .grid {
@@ -339,20 +385,13 @@ nav i {
   max-width: 260px;
   display: flex;
   flex-direction: column-reverse;
-  transition: filter 0.5s;
-}
-
-#region .item::after {
-  position: absolute;
-  content: '';
-  height: 150px;
-  width: 260px;
-  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.5s;
 }
 
 #region .item:hover {
   text-decoration: underline;
-  filter: brightness(80%);
+  box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.3);
 }
 
 #region .item a {
@@ -443,6 +482,10 @@ footer a {
   font-weight: bolder;
   display: block;
   margin-bottom: 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 footer .grid {

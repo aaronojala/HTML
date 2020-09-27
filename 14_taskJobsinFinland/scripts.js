@@ -19,3 +19,12 @@ function myFunction() {
     navbar.classList.remove('sticky');
   }
 }
+
+/* toggle search bar */
+
+$(document).ready(function () {
+  $('.fa-search').click(function () {
+    $('.togglesearch').toggle();
+    $("input[type='text']").focus();
+  });
+});
