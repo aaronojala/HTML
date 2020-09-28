@@ -1,0 +1,115 @@
+:root {
+  --background-color: cornsilk;
+  --light-color: skyblue;
+  --hightlight-color: salmon;
+  --dark-color: #333;
+  --font: 'Rock Salt', cursive;
+}
+
+body {
+  background-image: linear-gradient(-90deg, red, green, yellow);
+  background-repeat: no-repeat;
+  font-family: var(--font);
+  height: 100vh;
+}
+
+.card {
+  background-image: url(lexa.jpg);
+  background-size: cover;
+  height: 200px;
+  width: 150px;
+  margin: 0 auto;
+  background-color: var(--light-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--dark-color);
+  transition: all 2s 0s;
+}
+
+.card:hover {
+  /* transform: rotate(125deg); */
+  /* transform: skewY(25deg); */
+  /* transform: skewX(-90deg); */
+  /* transform: translateY(100px); */
+  /* transform: translateX(-100px); */
+  transform: translate(500px, 500px);
+  /* transform: translate3d(100px, 100px, 100px); */
+  /* perspective: 200px; */
+  /* transform: perspective(200px) rotateY(45deg); */
+}
+
+.circle {
+  /* background-image: url('https://source.unsplash.com/random');
+  background-size: cover; */
+  height: 200px;
+  width: 200px;
+  margin: 50px auto;
+  background-image: radial-gradient(red 5%, green 15%, yellow);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 5px var(--dark-color);
+  transition: all 2s 0s;
+  /* animation-name: example; */
+  animation-duration: 5s;
+  animation-iteration-count: 3;
+  position: relative;
+}
+
+/* @keyframes example {
+  from {
+    background: var(--light-color);
+  }
+  to {
+    background: var(--hightlight-color);
+    height: 300px;
+    width: 300px;
+    box-shadow: 10px 10px 20px black;
+  }
+} */
+
+@keyframes example {
+  0% {
+    top: 0;
+    left: 0;
+    background-color: purple;
+  }
+  25% {
+    top: 0;
+    left: 400px;
+    background-color: pink;
+  }
+  50% {
+    top: 400px;
+    left: 400px;
+    background-color: black;
+  }
+  75% {
+    top: 400px;
+    left: 0;
+    background-color: seagreen;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    background-color: purple;
+  }
+}
+
+.circle:hover {
+  /* transform: rotate(125deg); */
+  /* transform: skewY(25deg); */
+  /* transform: skewX(-90deg); */
+  /* transform: translateY(100px); */
+  /* transform: translateX(-100px); */
+  /*   transform: translate(500px, 500px);
+ */ /* transform: translate3d(100px, 100px, 100px); */
+  /* perspective: 200px; */
+  /*   transform: perspective(200px) rotateY(-400deg);
+ */
+}
