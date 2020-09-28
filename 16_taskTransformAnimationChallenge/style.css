@@ -1,3 +1,22 @@
+body {
+  background: linear-gradient(-45deg, #000000, #190491, #0094ca, #23d5ab);
+  background-size: 400% 400%;
+  color: white;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .first-task {
   height: 150px;
   width: 150px;
@@ -42,16 +61,125 @@
   color: white;
 }
 
-.fifth-task {
+/* .fifth-task {
   height: 400px;
   width: 400px;
   background-color: chocolate;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: all 2s;
+  transition: all 2s ease;
+} */
+
+/* .fifth-task:hover {
+  outline: 5px solid black;
+} */
+
+.fifth-task {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: chocolate;
 }
 
-.fifth-task:hover {
-  border: 5px solid black;
+.fifth-task::before,
+.fifth-task::after {
+  content: '';
+  width: 0;
+  height: 5px;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: #fff;
+}
+
+h3::before,
+h3::after {
+  content: '';
+  width: 5px;
+  height: 0;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: #fff;
+}
+.fifth-task:hover::before,
+.fifth-task:hover::after {
+  width: 100%;
+}
+.fifth-task:hover h3::before,
+.fifth-task:hover h3::after {
+  height: 100%;
+}
+
+.fifth-task::after {
+  right: 0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+.fifth-task h3::after {
+  right: 0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+.fifth-task::before {
+  left: 0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+.fifth-task h3::before {
+  left: 0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+
+.animated-circle {
+  height: 200px;
+  width: 200px;
+  background-color: crimson;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: move;
+  animation-duration: 3s;
+  animation-iteration-count: 5;
+  position: relative;
+}
+
+.animated-circle:hover {
+  animation-play-state: paused;
+}
+
+@keyframes move {
+  0% {
+    top: 0;
+    left: 0;
+    background-color: crimson;
+  }
+  25% {
+    top: 0;
+    left: 400px;
+    background-color: pink;
+    border-radius: 0%;
+  }
+  50% {
+    top: 400px;
+    left: 400px;
+    background-color: black;
+    border-radius: 50%;
+  }
+  75% {
+    top: 400px;
+    left: 0;
+    background-color: seagreen;
+    border-radius: 0%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    background-color: crimson;
+    border-radius: 50%;
+  }
 }
