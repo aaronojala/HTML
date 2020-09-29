@@ -10,7 +10,7 @@ body {
   background-image: linear-gradient(-90deg, red, green, yellow);
   background-repeat: no-repeat;
   font-family: var(--font);
-  height: 100vh;
+  height: 4000px;
 }
 
 .card {
@@ -112,4 +112,23 @@ body {
   /* perspective: 200px; */
   /*   transform: perspective(200px) rotateY(-400deg);
  */
+}
+
+/* Menu animation */
+
+.menu-item h1 {
+  display: inline-block;
+}
+
+.menu-item h1::after {
+  content: '';
+  height: 4px;
+  width: 0;
+  display: inherit;
+  background-color: var(--hightlight-color);
+  transition: all 1s;
+}
+
+.menu-item:hover h1::after {
+  width: 100%;
 }
