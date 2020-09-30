@@ -137,7 +137,7 @@ nav i {
   top: 125px;
   right: 5%;
   width: 230px;
-  height: 50px;
+  height: 60px;
   line-height: 40px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-top: 4px solid white;
@@ -154,6 +154,12 @@ nav i {
   border-top: 7px solid transparent;
   border-bottom: 7px solid white;
 }
+
+.togglesearch form {
+  display: flex;
+  padding-top: 10px;
+}
+
 .togglesearch input[type='text'] {
   width: 150px;
   padding: 5px 10px;
@@ -161,14 +167,20 @@ nav i {
   border: 1px solid rgba(0, 0, 0, 0.1);
   outline: none;
 }
-.togglesearch input[type='button'] {
-  width: 50px;
+
+.togglesearch button {
+  width: 40px;
   padding: 5px 0;
   background: #002da1;
   color: #fff;
   margin-left: -6px;
   border: 1px solid #002da1;
   cursor: pointer;
+}
+
+.togglesearch i {
+  font-size: 16px;
+  padding: 0;
 }
 
 ::placeholder {
@@ -201,18 +213,23 @@ nav i {
 
 .dropdown li {
   padding: 6px;
+  display: block;
 }
 
 .dropdown a {
   color: #002da1;
   font-size: 12px;
   text-transform: capitalize;
-  padding: 0px;
+  display: block;
+  padding: 6px 6px;
+}
+
+.dropdown li:hover {
+  box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown a:hover {
   border-bottom: none;
-  box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.1);
 }
 
 /* hero banner */

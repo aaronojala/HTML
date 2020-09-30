@@ -11,6 +11,10 @@
       integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/1264ce8aa0.js"
       crossorigin="anonymous"
@@ -57,8 +61,12 @@
                 ><i class="fas fa-search" aria-hidden="true"></i
               ></a>
               <div class="togglesearch">
-                <input type="text" placeholder="Search" />
-                <input type="button" value="search" />
+                <form>
+                  <input type="text" placeholder="Search" />
+                  <button type="submit">
+                    <i class="material-icons">search</i>
+                  </button>
+                </form>
               </div>
             </li>
           </ul>
@@ -66,7 +74,7 @@
       </header>
       <main>
         <button onclick="topFunction()" id="myBtn" title="Go to top">
-          Top
+          <i class="material-icons">keyboard_arrow_up </i>
         </button>
         <section id="hero-banner">
           <div class="content">
