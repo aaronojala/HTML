@@ -300,8 +300,8 @@ nav i {
 }
 
 #category .item {
-  min-height: 150px;
-  max-width: 260px;
+  height: 200px;
+  width: 350px;
   display: flex;
   flex-direction: column-reverse;
   box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.1);
@@ -412,8 +412,8 @@ nav i {
 }
 
 #region .item {
-  min-height: 150px;
-  max-width: 260px;
+  height: 200px;
+  width: 350px;
   display: flex;
   flex-direction: column-reverse;
   box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.1);
