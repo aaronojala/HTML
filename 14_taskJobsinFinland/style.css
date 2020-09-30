@@ -244,6 +244,33 @@ nav i {
 /* hero banner */
 
 #hero-banner {
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
+}
+
+#hero-banner .parallax {
+  position: relative;
+  background-color: #002da1;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero-banner .parallax::before {
+  content: '';
+  background: url('https://source.unsplash.com/cw-cj_nFa14/') no-repeat fixed
+    top center / cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+  position: absolute;
+}
+
+/* #hero-banner {
   background: url('https://source.unsplash.com/cw-cj_nFa14/') no-repeat fixed
     center center/cover;
   height: 70vh;
@@ -260,13 +287,14 @@ nav i {
   height: 100%;
   width: 100%;
   background-color: rgb(0, 45, 161, 0.4);
-}
+} */
 
 #hero-banner .content {
   color: white;
   z-index: 1;
   text-transform: uppercase;
   max-width: 50%;
+  text-align: center;
 }
 
 #hero-banner h1 {
@@ -326,8 +354,8 @@ nav i {
 }
 
 #category .item {
-  height: 200px;
-  width: 350px;
+  height: 150px;
+  width: 260px;
   display: flex;
   flex-direction: column-reverse;
   box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.1);
@@ -438,8 +466,8 @@ nav i {
 }
 
 #region .item {
-  height: 200px;
-  width: 350px;
+  height: 150px;
+  width: 260px;
   display: flex;
   flex-direction: column-reverse;
   box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.1);
@@ -597,5 +625,39 @@ footer .item:nth-child(4) {
 
   footer .item {
     width: 150px;
+  }
+}
+
+/* phones up to 320 px */
+
+@media (max-width: 320px) {
+  #hero-banner h1 {
+    font-size: 50px;
+  }
+
+  #hero-banner p {
+    font-size: 16px;
+  }
+
+  #category .grid,
+  #region .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer .grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer .grid .item {
+    margin-bottom: 3rem;
+    margin-left: 0;
+  }
+
+  #back-to-top {
+    display: none;
   }
 }
