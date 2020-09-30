@@ -1,62 +1,69 @@
 :root {
   --background-color: cornsilk;
   --light-color: skyblue;
-  --hightlight-color: salmon;
+  --highlight-color: salmon;
   --dark-color: #333;
-  --font: 'Rock Salt', cursive;
+  --font: 'Quicksand', sans-serif;
+  --gradient: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
 }
 
 body {
-  background-image: linear-gradient(-90deg, red, green, yellow);
-  background-repeat: no-repeat;
+  background: var(--gradient);
   font-family: var(--font);
-  height: 4000px;
+  height: 100vh;
 }
 
+/* Card transforms on hover */
+
 .card {
-  background-image: url(lexa.jpg);
-  background-size: cover;
   height: 200px;
   width: 150px;
   margin: 0 auto;
-  background-color: var(--light-color);
-  color: white;
+  background: var(--light-color);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
   box-shadow: 0 0 5px var(--dark-color);
   transition: all 2s 0s;
+  margin-bottom: 2rem;
 }
 
 .card:hover {
-  /* transform: rotate(125deg); */
-  /* transform: skewY(25deg); */
-  /* transform: skewX(-90deg); */
+  transform: rotate(125deg);
+  /*  transform: skewY(25deg); */
+  /* transform: skewX(25deg); */
+  /* transform: scale(2, 5); */
   /* transform: translateY(100px); */
   /* transform: translateX(-100px); */
-  transform: translate(500px, 500px);
+  /* transform: translate(100px, 100px); */
   /* transform: translate3d(100px, 100px, 100px); */
   /* perspective: 200px; */
-  /* transform: perspective(200px) rotateY(45deg); */
+  /* transform: perspective(400px) rotateY(45deg); */
 }
 
+/* Circle animation */
+
 .circle {
-  /* background-image: url('https://source.unsplash.com/random');
-  background-size: cover; */
-  height: 200px;
-  width: 200px;
-  margin: 50px auto;
-  background-image: radial-gradient(red 5%, green 15%, yellow);
-  color: white;
+  background: var(--light-color);
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   border-radius: 50%;
   box-shadow: 0 0 5px var(--dark-color);
-  transition: all 2s 0s;
-  /* animation-name: example; */
-  animation-duration: 5s;
+  animation-name: example;
+  animation-duration: 4s;
   animation-iteration-count: 3;
   position: relative;
 }
@@ -66,9 +73,9 @@ body {
     background: var(--light-color);
   }
   to {
-    background: var(--hightlight-color);
-    height: 300px;
-    width: 300px;
+    background: var(--highlight-color);
+    height: 200px;
+    width: 200px;
     box-shadow: 10px 10px 20px black;
   }
 } */
@@ -77,58 +84,85 @@ body {
   0% {
     top: 0;
     left: 0;
-    background-color: purple;
+    background: green;
   }
   25% {
     top: 0;
-    left: 400px;
-    background-color: pink;
+    left: 200px;
+    background: yellow;
   }
   50% {
-    top: 400px;
-    left: 400px;
-    background-color: black;
+    top: 200px;
+    left: 200px;
+    background: pink;
   }
   75% {
-    top: 400px;
+    top: 200px;
     left: 0;
-    background-color: seagreen;
+    background: blue;
   }
   100% {
     top: 0;
     left: 0;
-    background-color: purple;
+    background: green;
   }
 }
 
-.circle:hover {
-  /* transform: rotate(125deg); */
-  /* transform: skewY(25deg); */
-  /* transform: skewX(-90deg); */
-  /* transform: translateY(100px); */
-  /* transform: translateX(-100px); */
-  /*   transform: translate(500px, 500px);
- */ /* transform: translate3d(100px, 100px, 100px); */
-  /* perspective: 200px; */
-  /*   transform: perspective(200px) rotateY(-400deg);
- */
+/* Menu animations */
+.simple,
+.advanced {
+  text-align: center;
+  height: 150px;
 }
 
-/* Menu animation */
-
-.menu-item h1 {
+h1 {
   display: inline-block;
+  position: relative;
+  padding: 10px;
+  text-align: left;
 }
-
-.menu-item h1::after {
+/********* Simple left to right **************/
+.simple h1::after {
   content: '';
   height: 4px;
   width: 0;
-  display: inherit;
-  background-color: var(--hightlight-color);
-  transition: all 1s;
+  display: block;
+  background: var(--highlight-color);
+  transition: 1s ease-in all;
 }
 
-.menu-item:hover h1::after {
+.simple:hover h1::after {
   width: 100%;
+}
+
+/********* LEFT SIDE - bottom to top *********/
+
+/* .advanced h1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 200px;
+  left: 0;
+  bottom: 0;
+  border-left: 3px solid var(--highlight-color);
+  transition: all 1s;
+}
+.advanced:hover h1::before {
+  top: 0;
+} */
+
+/********* LEFT SIDE - top to bottom *********/
+
+.advanced h1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 200px;
+  border-left: 3px solid var(--highlight-color);
+  transition: all 1s;
+}
+.advanced:hover h1::before {
+  bottom: 0;
 }
