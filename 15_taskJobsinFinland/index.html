@@ -23,52 +23,60 @@
   <body>
     <div id="container">
       <header>
-        <div id="top">
-          <div id="logo">
-            <a href="#">Jobs in</a>
-            <a class="finland" href="#">Finland</a>
+        <div class="top-bar">
+          <div class="logo">
+            <a href="">Jobs in <br /><span> finland</span></a>
           </div>
-          <div class="link_1">
-            <a href="#">» Work in Finland</a>
+          <div class="header-link">
+            <a href="#"
+              ><i class="material-icons">double_arrow</i> Work in Finland</a
+            >
           </div>
         </div>
-        <nav id="navbar">
-          <ul>
-            <li><a class="home" href="#">Jobs Home</a></li>
-            <div class="menu-bar">
-              <li><a href="#">Regions</a></li>
-              <div class="dropdown">
-                <ul>
-                  <li><a href="#">Capital Region</a></li>
-                  <li><a href="#">Lapland</a></li>
-                  <li><a href="#">Central Ostrobothnia</a></li>
-                  <li><a href="#">Southwest Finland</a></li>
-                  <li><a href="#">Northern Savonia</a></li>
-                  <li><a href="#">Pirkanmaa</a></li>
-                  <li><a href="#">Ostrobothnia</a></li>
-                  <li><a href="#">Satakunta</a></li>
-                </ul>
-              </div>
+        <div id="main-nav">
+          <nav>
+            <div id="openMenu" class="icon menu" onclick="openMenu()">
+              <a href="#"></a> <i class="material-icons">menu</i>
             </div>
-            <li><a href="#">Open positions</a></li>
-            <li><a href="#">Campaigns</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">For Employers</a></li>
-          </ul>
-          <ul>
-            <li class="searchbar">
-              <a class="search"><i class="fas fa-search"></i></a>
-              <div class="togglesearch">
-                <form>
-                  <input type="text" placeholder="Search" />
-                  <button type="submit">
-                    <i class="material-icons">search</i>
-                  </button>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </nav>
+            <div id="closeMenu" class="icon hide close" onclick="closeMenu()">
+              <a href="#"></a> <i class="material-icons">close</i>
+            </div>
+            <ul id="menu">
+              <li class="current"><a href="#">Jobs home</a></li>
+              <li>
+                <a href="">Regions</a>
+                <ul>
+                  <li><a href="">Lapland</a></li>
+                  <li><a href="">Capital region</a></li>
+                  <li><a href="">Central Ostrobothnia</a></li>
+                  <li><a href="">Southwest Finland</a></li>
+                  <li><a href="">Northern Savonia</a></li>
+                  <li><a href="">Pirkanmaa</a></li>
+                  <li><a href="">Ostrobothnia</a></li>
+                  <li><a href="">Satakunta</a></li>
+                  <li><a href="">Uusimaa</a></li>
+                </ul>
+              </li>
+              <li><a href="">Open positions</a></li>
+              <li><a href="">Campaigns</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">For Employers</a></li>
+            </ul>
+          </nav>
+          <div class="search">
+            <div class="btn" onclick="showHide()">
+              <i class="material-icons">search</i>
+            </div>
+            <div id="search-form" class="hide">
+              <form>
+                <input type="text" placeholder="Search" />
+                <button class="btn btn-primary" type="submit">
+                  <i class="material-icons">search</i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </header>
       <main>
         <div id="back-to-top">

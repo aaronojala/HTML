@@ -1,3 +1,24 @@
+const search = document.getElementById('search-form');
+const openM = document.getElementById('openMenu');
+const closeM = document.getElementById('closeMenu');
+const menu = document.getElementById('menu');
+
+// SHOW / HIDE SEARCH FORM
+
+const showHide = () => {
+  search.classList.toggle('hide');
+};
+
+const openMenu = () => {
+  closeM.classList.toggle('hide');
+  menu.style.display = 'block';
+};
+
+const closeMenu = () => {
+  closeM.classList.toggle('hide');
+  menu.style.display = 'none';
+};
+
 /* back to top button */
 
 //Get the button:
@@ -18,19 +39,10 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-/* toggle search bar */
-
-$(document).ready(function () {
-  $('.fa-search').click(function () {
-    $('.togglesearch').toggle();
-    $("input[type='text']").focus();
-  });
-});
-
 /* nav bar sticky */
 
 // Get the navbar
-var navbar = document.getElementById('navbar');
+var navbar = document.getElementById('main-nav');
 
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
