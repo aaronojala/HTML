@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: pink;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  background-color: purple;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0; /* so the header knows where to go */
+  width: 100%;
+}
+
+header .logo p {
+  font-size: 2rem;
+}
+
+header .icon {
+  display: none;
+}
+
+header nav ul {
+  position: relative;
+}
+
+header nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+header nav ul li a {
+  padding: 1rem;
+}
+
+header nav ul li a:hover {
+  background-color: violet;
+}
+
+header nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 35px;
+  background-color: violet;
+}
+
+header nav ul li:hover ul,
+header nav ul li:focus-within > ul {
+  display: block;
+}
+
+header nav ul li ul li {
+  display: block;
+}
+
+header nav ul li ul li a {
+  display: block;
+  padding: 1rem;
+}
+
+header nav ul li ul li a:hover {
+  background-color: purple;
+}
+
+main {
+  margin-top: 300px; /* header space taken away when fixed so use this to counter the space */
+}
+
+section {
+  min-height: 25vh;
+}
+
+@media (max-width: 576px) {
+  header .icon {
+    display: block;
+  }
+
+  header nav ul {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: violet;
+    width: 100%;
+  }
+
+  header nav ul.mobilemenu {
+    display: block;
+  }
+
+  header nav ul li {
+    display: block;
+  }
+
+  header nav ul li a {
+    display: block;
+    padding: 1rem;
+  }
+
+  header nav ul li a:hover {
+    background-color: purple;
+  }
+
+  header nav ul li ul {
+    display: block;
+    position: relative;
+    top: 0;
+    padding-left: 1rem;
+  }
+}
