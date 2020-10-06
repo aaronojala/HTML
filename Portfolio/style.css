@@ -5,12 +5,25 @@
   scroll-margin-top: 5em;
 }
 
+:root {
+  --background-color: lightslategray;
+  --dark-color: black;
+  --light-color: white;
+  --dark-variant: rgb(77, 77, 77);
+  --highlight-color: rgb(145, 13, 13);
+  --skillsevencolor: rgba(197, 197, 197, 0.5);
+  --skillsoddcolor: rgba(255, 255, 255, 0.5);
+  --progressbarcolor: rgb(241, 241, 241);
+  --gallerybackground: rgb(245, 233, 212);
+  --font: 'Source Code Pro', monospace;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Source Code Pro', monospace;
+  font-family: var(--font);
 }
 
 h2 {
@@ -19,7 +32,7 @@ h2 {
 
 .container {
   max-width: 75rem;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: var(--light-color);
   padding: 3rem;
   border-radius: 2px;
   min-height: 25%;
@@ -29,7 +42,7 @@ h2 {
 /* Header area */
 
 header {
-  background-color: rgb(77, 77, 77);
+  background-color: var(--dark-variant);
   padding: 1.25rem;
   display: flex;
   justify-content: space-between;
@@ -60,12 +73,12 @@ header nav ul {
 
 .nodeco {
   text-decoration: none;
-  color: white;
+  color: var(--light-color);
 }
 
 .fas {
   padding: 5px;
-  color: white;
+  color: var(--light-color);
 }
 
 .menu-bar {
@@ -76,7 +89,7 @@ header nav ul {
 
 .menu-bar li a:hover,
 .contacthover li a:hover {
-  color: lightslategray;
+  color: var(--background-color);
 }
 
 .sub-menu {
@@ -85,19 +98,19 @@ header nav ul {
 }
 
 .sub-menu li a {
-  color: black;
+  color: var(--dark-color);
   padding: 5px 0;
   border-bottom: 4px solid transparent;
   display: block;
 }
 
 .sub-menu li a:hover {
-  border-bottom: 4px solid rgb(77, 77, 77);
+  border-bottom: 4px solid var(--dark-variant);
 }
 
 .menu-bar:hover .sub-menu {
   display: block;
-  background-color: white;
+  background-color: var(--light-color);
   width: 10rem;
   padding: 1rem;
   margin-top: 2rem;
@@ -133,13 +146,13 @@ main #hero-banner h1 {
 }
 
 main #hero-banner span {
-  color: black;
+  color: var(--dark-color);
 }
 
 /* work section */
 
 main #work {
-  background-color: lightslategray;
+  background-color: var(--background-color);
 }
 
 main #work h2 {
@@ -154,7 +167,7 @@ main #work .containerWork {
 }
 
 main #work .box {
-  background-color: white;
+  background-color: var(--light-color);
   border-radius: 5px;
   box-shadow: 2px 2px 10px 0px;
   width: 24rem;
@@ -163,6 +176,7 @@ main #work .box {
   margin: 1rem;
   display: flex;
   flex-direction: column;
+  transition: all 1s ease;
 }
 
 main #work .box:hover {
@@ -182,7 +196,7 @@ a {
 
 main #work .box a {
   text-decoration: none;
-  color: rgb(145, 13, 13);
+  color: var(--highlight-color);
 }
 
 /* Experience section */
@@ -231,11 +245,11 @@ main #skills .containerSkills .box {
 }
 
 #skills .box:nth-child(even) {
-  background-color: rgba(197, 197, 197, 0.5);
+  background-color: var(--skillsevencolor);
 }
 
 #skills .box:nth-child(odd) {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--skillsoddcolor);
 }
 
 #skills progress[value] {
@@ -246,25 +260,25 @@ main #skills .containerSkills .box {
 
 progress[value]::-webkit-progress-bar {
   border-radius: 2px;
-  background-color: rgb(241, 241, 241);
+  background-color: var(--progressbarcolor);
   box-shadow: inset -2px 2px 3px rgb(175, 175, 175);
 }
 
 progress[value]::-webkit-progress-value {
   border-radius: 2px;
-  background-color: black;
+  background-color: var(--dark-color);
 }
 
 /* Gallery */
 
 #gallery {
-  background-color: rgb(245, 233, 212);
+  background-color: var(--gallerybackground);
   padding: 10rem 4rem;
 }
 
 #gallery a {
   text-decoration: none;
-  color: rgb(145, 13, 13);
+  color: var(--highlight-color);
 }
 
 #gallery .grid-container {
@@ -340,14 +354,14 @@ figure:hover img {
 /* footer */
 
 footer {
-  background-color: lightslategray;
+  background-color: var(--background-color);
   text-align: center;
-  color: white;
+  color: var(--light-color);
   padding: 2rem;
 }
 
 footer .container {
-  background-color: lightslategrey;
+  background-color: var(--background-color);
   padding-bottom: 0;
   padding-top: 0;
 }
@@ -389,11 +403,11 @@ footer form .form-group textarea {
 }
 
 footer form button {
-  background-color: rgb(77, 77, 77);
+  background-color: var(--dark-variant);
   border-radius: 5px;
   border: none;
   padding: 1rem 2rem;
-  color: #fff;
+  color: var(--light-color);
   margin-left: 15rem;
   font-size: inherit;
   font-family: inherit;
