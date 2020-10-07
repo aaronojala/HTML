@@ -46,75 +46,64 @@ header {
   padding: 1.25rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   width: 100%;
   z-index: 2;
 }
 
-header #logo {
-  margin-top: auto;
+#logo {
+  margin-top: 8px;
 }
 
 /* Main navigation*/
 
-header nav {
-  list-style: none;
-  padding: 1.25rem;
-  display: flex;
+header .icon {
+  display: none;
+}
+
+header nav a {
+  color: var(--light-color);
+  text-decoration: none;
 }
 
 header nav ul {
-  list-style: none;
-}
-
-.menu-bar li a {
-  padding-bottom: 2.5rem;
-}
-
-.nodeco {
-  text-decoration: none;
-  color: var(--light-color);
-}
-
-.fas {
-  padding: 5px;
-  color: var(--light-color);
-}
-
-.menu-bar {
   position: relative;
+}
+
+header nav ul li {
   display: inline-block;
-  margin-right: 2rem;
+  list-style-type: none;
 }
 
-.menu-bar li a:hover,
-.contacthover li a:hover {
-  color: var(--background-color);
+header nav ul li a {
+  padding: 1rem;
 }
 
-.sub-menu {
+header nav ul li ul {
   display: none;
   position: absolute;
-}
-
-.sub-menu li a {
-  color: var(--dark-color);
-  padding: 5px 0;
-  border-bottom: 4px solid transparent;
-  display: block;
-}
-
-.sub-menu li a:hover {
-  border-bottom: 4px solid var(--dark-variant);
-}
-
-.menu-bar:hover .sub-menu {
-  display: block;
+  top: 35px;
   background-color: var(--light-color);
-  width: 10rem;
-  padding: 1rem;
-  margin-top: 2rem;
-  right: 0;
+}
+
+header nav ul li:hover ul {
+  display: block;
+}
+
+header nav ul li ul li {
+  display: block;
+}
+
+header nav ul li ul li a {
+  display: block;
+  padding: 0.5rem;
+  color: var(--dark-color);
+}
+
+header nav ul li ul li a:hover {
+  color: var(--light-color);
+  background-color: var(--dark-color);
 }
 
 /* Hero Banner */
@@ -411,6 +400,7 @@ footer form button {
   margin-left: 15rem;
   font-size: inherit;
   font-family: inherit;
+  cursor: pointer;
 }
 
 /* Tablets up to 768px */
@@ -462,16 +452,8 @@ footer form button {
     align-items: center;
   }
 
-  header #logo {
-    margin-bottom: -5px;
-  }
-
-  header nav ul {
-    padding: 5px;
-  }
-
-  header nav ul li a {
-    padding: 1px;
+  #logo {
+    margin-top: 5px;
   }
 
   main #hero-banner h1 {
@@ -535,5 +517,53 @@ footer form button {
   footer form button {
     font-size: 10px;
     padding: 5px 10px;
+  }
+
+  /* mobile menu */
+
+  header .icon {
+    display: block;
+  }
+
+  header a {
+    color: var(--dark-color);
+  }
+
+  header nav ul {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: var(--light-color);
+    width: 100%;
+  }
+
+  header nav ul.mobilemenu {
+    display: block;
+  }
+
+  header nav ul.mobilemenu a {
+    color: var(--dark-color);
+  }
+
+  header nav ul li {
+    display: block;
+  }
+
+  header nav ul li a {
+    display: block;
+    padding: 0.5rem;
+  }
+
+  header nav ul li ul {
+    display: block;
+    position: relative;
+    top: 0;
+    padding-left: 1rem;
+  }
+
+  header nav ul li a:hover {
+    background-color: var(--dark-color);
+    color: var(--light-color);
   }
 }

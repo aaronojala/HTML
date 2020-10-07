@@ -12,6 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <script src="https://kit.fontawesome.com/1264ce8aa0.js" crossorigin="anonymous"></script>
   </head>
 
@@ -21,20 +25,22 @@
         <a href="index.html"><img src="logowhite.svg" alt="logo" /></a>
       </div>
       <nav>
-      <div class="menu-bar">
-          <li><a class="nodeco" href="#">Portfolio<i class="fas fa-angle-down"></i></a></li>
-          <div class="sub-menu">
-              <ul>
-          <li><a class="nodeco" href="#work">Work</a></li>
-          <li><a class="nodeco" href="#experience">Experience</a></li>
-          <li><a class="nodeco" href="#skills">Skills</a></li>
-          <li><a class="nodeco" href="gallery.html">Gallery</a></li>
-              </ul>
-          </div>    
-        </div>
-        <div class="contacthover">
-          <li><a class="nodeco" href="#footer">Contact Me</a></li>
-        </div>
+        <a onclick="mobileMenu()" class="icon"
+          ><span class="material-icons">menu</span></a
+        >
+       <ul class="mobilemenu">
+        <li>
+          <a href="#">Portfolio <i class="fas fa-angle-down"></i></a>
+          <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="#animation">Animation</a></li>
+          </ul> 
+        </li>
+        <li><a href="#footer">Contact Me</a></li>
+        </ul>    
       </nav>
     </header>
     <main>
@@ -155,5 +161,6 @@
         <p>Copyright &copy; My Website 2020</p>
       </div>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
