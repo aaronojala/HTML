@@ -258,6 +258,82 @@ progress[value]::-webkit-progress-value {
   background-color: var(--dark-color);
 }
 
+/* Animation */
+
+#animation {
+  background: var(--gradient);
+  min-height: 100vh;
+  padding: 10rem 4rem;
+  background: linear-gradient(-45deg, #000000, #1b049b, #0094ca, #76a9f5);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: var(--light-color);
+  text-align: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animatedCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(to right, black, white);
+  animation-name: move;
+  animation-duration: 10s;
+  animation-iteration-count: 5;
+}
+
+.animatedCircle:hover {
+  animation-play-state: paused;
+}
+
+@keyframes move {
+  0% {
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, black, white);
+  }
+  25% {
+    top: 0;
+    left: 800px;
+    background: linear-gradient(to left, black, white);
+    border-radius: 0%;
+  }
+  50% {
+    top: 700px;
+    left: 800px;
+    background: linear-gradient(to top, black, white);
+    border-radius: 50%;
+  }
+  75% {
+    top: 700px;
+    left: 0;
+    background: linear-gradient(to bottom, black, white);
+    border-radius: 0%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, black, white);
+    border-radius: 50%;
+  }
+}
+
 /* Gallery */
 
 #gallery {
@@ -463,6 +539,31 @@ footer form button {
   footer form button {
     margin-left: 0;
   }
+
+  /* animation */
+
+  @keyframes move {
+    0% {
+      top: 0;
+      left: 0;
+    }
+    25% {
+      top: 0;
+      left: 500px;
+    }
+    50% {
+      top: 700px;
+      left: 500px;
+    }
+    75% {
+      top: 700px;
+      left: 0;
+    }
+    100% {
+      top: 0;
+      left: 0;
+    }
+  }
 }
 
 /* Iphone5 */
@@ -587,5 +688,40 @@ footer form button {
   header nav ul li a:hover {
     background-color: var(--dark-color);
     color: var(--light-color);
+  }
+
+  /* animation */
+
+  .animatedCircle {
+    font-size: 8px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .animatedCircle:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes move {
+    0% {
+      top: 0;
+      left: 0;
+    }
+    25% {
+      top: 0;
+      left: 180px;
+    }
+    50% {
+      top: 200px;
+      left: 180px;
+    }
+    75% {
+      top: 200px;
+      left: 0;
+    }
+    100% {
+      top: 0;
+      left: 0;
+    }
   }
 }
